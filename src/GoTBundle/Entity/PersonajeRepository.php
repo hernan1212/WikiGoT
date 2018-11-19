@@ -10,4 +10,20 @@ namespace GoTBundle\Entity;
  */
 class PersonajeRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function getAllPersonajes($limit = null)
+	{
+		$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.name', 'ASC');
+
+		if (false === is_null($limit))
+			$qp->setMaxResults($limit);
+
+		return $qp->getQuery()->getResult();
+	}
+
+	public function getPersonajesForHouse($houseId)
+	{
+		$qh = $this->createQueryBuilder('p')->select('p')->where('p.house = :house_id')->addOrderBy('p.name')->setParameter('house_id', $houseId);
+
+		return $qh->getQuery()->getResult();
+	}
 }
