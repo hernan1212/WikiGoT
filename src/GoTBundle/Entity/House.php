@@ -52,7 +52,7 @@ class House
      */
     public function __construct()
     {
-        $this->characters = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->personajes = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -183,40 +183,6 @@ class House
     public function getEmblem()
     {
         return $this->emblem;
-    }
-
-    /**
-     * Add character
-     *
-     * @param \GoTBundle\Entity\Character $character
-     *
-     * @return House
-     */
-    public function addCharacter(\GoTBundle\Entity\Character $character)
-    {
-        $this->characters[] = $character;
-
-        return $this;
-    }
-
-    /**
-     * Remove character
-     *
-     * @param \GoTBundle\Entity\Character $character
-     */
-    public function removeCharacter(\GoTBundle\Entity\Character $character)
-    {
-        $this->characters->removeElement($character);
-    }
-
-    /**
-     * Get characters
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCharacters()
-    {
-        return $this->characters;
     }
 
     /**
