@@ -10,4 +10,13 @@ namespace GoTBundle\Entity;
  */
 class HouseRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function getAllHouses($limit = null)
+	{
+		$qh = $this->createQueryBuilder('h')->select('h')->addOrderBy('h.name', 'ASC');
+
+		if (false === is_null($limit))
+			$qh->setMaxResults($limit);
+
+		return $qh->getQuery()->getResult();
+	}
 }

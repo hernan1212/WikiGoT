@@ -5,3 +5,7 @@ blogger_blog_list:
 blogger_blog_show:
     path: /show/{id}
     defaults: { _controller: GoTBundle:Blog:show }
+
+blogger_blog_seasons:
+    path: /season/
+    defaults: { _controller: GoTBundle:Season:list }

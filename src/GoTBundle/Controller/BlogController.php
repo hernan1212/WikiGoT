@@ -9,9 +9,9 @@ class BlogController extends Controller
 
 	public function listAction()
 	{
-		$personajes = $this->get('doctrine')->getManager()->getRepository('GoTBundle:Personaje')->getAllPersonajes();
+		$houses = $this->get('doctrine')->getManager()->getRepository('GoTBundle:House')->getAllHouses();
 
-		return $this->render('GoTBundle:Blog:list.html.twig', array('personajes' => $personajes));
+		return $this->render('GoTBundle:Blog:list.html.twig', array('houses' => $houses));
 	}
 
 	public function showAction($id)

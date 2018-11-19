@@ -110,8 +110,11 @@ class Personaje
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription($length = null)
     {
+        if (false === is_null($length) && $length > 0 && strlen($this->description) > $length)
+        return substr($this->description, 0, $length) . "(...)";
+    else
         return $this->description;
     }
 

@@ -7,37 +7,33 @@
 <p>― Divididos por casas</p> 
 {% endblock %}
 {% block body %}
-{% for personaje in personajes %}
-<div class="about-section" id="aboutus"><!--Sección personajes por casas-->
+{% for house in houses %}
 
-	<div class="about-grids">
-	
-		<div class="col-md-6 left-grid">
-			<div class="right-grid1-icon">
-                <img src="{{ asset('images/icon.png') }}">
-            </div>
+<div class="team-section" id="team"><!-- John Snow -->
+    <div class="container">
+        <div class="team-header">
+                                
+                                <h3><img src="{{ asset(house.emblem) }}" width="108px" height="108px"> {{ house.name }}</h3>
 
-            <img src="{{ asset(personaje.foto) }}"/>
-        </div>
-
-    	<div class="col-md-6 right-grid">
-        	<div class="right-top">
-
-        		<a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}">
-				{{ personaje.name }}</a>
-
-            </div>
-
-            <div class="right-bottom">
-
-        		<h4> {{ personaje.description }}<h4>
-
-        	</div>
-        </div>
-		
-        <div class="clearfix"> </div>
-		
-    </div>
-</div>
+                                <p>{{ house.motto }}</p>
+                                </div>
+                                <div class="team-grids">
+                                    <div class="col-md-4 team-grid">
+                                        <img src="{{ asset(house.personajes[0].foto) }}"  width="300px" height="450px">
+                            </div>
+                                    <div class="team-grids">
+                                    <div class="col-md-8 team-grid">
+                                        <div class="team-content">
+                                            <a href="{{ path('blogger_blog_show', {'id': house.personajes[0].id}) }}">
+                                            {{ house.personajes[0].name }}</a><br><br><br><br>
+                                            <br><br><br><br>
+                                        <p> {{ house.personajes[0].description(150) }} </p>
+                                        </div>
+                        </div>
+                            </div>
+                        <div class="clearfix"> </div>
+                            </div> 
+                            </div>
+                        </div><!-- End John Snow -->
 {% endfor %}
 {% endblock %}
