@@ -2,15 +2,42 @@
 {% extends "::base.html.twig" %}
 {% block title %}Lista de Personajes{% endblock %}
 
+{% block slider %}
+<h3> Lista de Personajes de Juego de Tronos</h3>
+<p>― Divididos por casas</p> 
+{% endblock %}
 {% block body %}
-	<h3>Lista de personajes</h3>
-	<ul>
-		{% for personaje in personajes %}
-		<li>
-			<a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}">
-				{{ personaje.nombre }}
-			</a>
-		</li>
-		{% endfor %}
-	</ul>
+{% for personaje in personajes %}
+<div class="about-section" id="aboutus"><!--Sección personajes por casas-->
+
+	<div class="about-grids">
+	
+		<div class="col-md-6 left-grid">
+			<div class="right-grid1-icon">
+                <img src="{{ asset('images/icon.png') }}">
+            </div>
+
+            <img src="{{ asset(personaje.foto) }}"/>
+        </div>
+
+    	<div class="col-md-6 right-grid">
+        	<div class="right-top">
+
+        		<a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}">
+				{{ personaje.name }}</a>
+
+            </div>
+
+            <div class="right-bottom">
+
+        		<h4> {{ personaje.description }}<h4>
+
+        	</div>
+        </div>
+		
+        <div class="clearfix"> </div>
+		
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

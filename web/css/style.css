@@ -48,6 +48,12 @@ body{
   padding: 6em 0;
 
  }
+
+.right-top a {
+      color: #fff;
+       font-size: 2.8em;
+  }
+
 .logo{
 	float: left;
 }
