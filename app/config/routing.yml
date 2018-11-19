@@ -1,0 +1,7 @@
+go_t:
+    resource: "@GoTBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation

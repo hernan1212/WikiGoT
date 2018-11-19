@@ -1,0 +1,18 @@
+{# src/GoTBundle/Resources/views/Blog/show.html.twig #}
+{% extends "::base.html.twig" %}
+{% block title %}Detalles del personaje{% endblock %}
+
+{% block body %}
+	<h3>{{ personaje.nombre }}</h3>
+	<ul>
+		<li>
+			{{ personaje.description }}
+		</li>
+	</ul>
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

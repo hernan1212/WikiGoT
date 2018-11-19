@@ -1,0 +1,16 @@
+{# src/GoTBundle/Resources/views/Blog/list.html.twig #}
+{% extends "::base.html.twig" %}
+{% block title %}Lista de Personajes{% endblock %}
+
+{% block body %}
+	<h3>Lista de personajes</h3>
+	<ul>
+		{% for personaje in personajes %}
+		<li>
+			<a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}">
+				{{ personaje.nombre }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

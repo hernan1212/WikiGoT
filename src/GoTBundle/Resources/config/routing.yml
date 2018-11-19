@@ -1,0 +1,7 @@
+blogger_blog_list:
+    path: /
+    defaults: { _controller: GoTBundle:Blog:list }
+
+blogger_blog_show:
+    path: /show/{id}
+    defaults: { _controller: GoTBundle:Blog:show }
