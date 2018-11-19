@@ -123,11 +123,11 @@ class Season
     /**
      * Set capitulos
      *
-     * @param \number $capitulos
+     * @param integer $capitulos
      *
      * @return Season
      */
-    public function setCapitulos(\number $capitulos)
+    public function setCapitulos($capitulos)
     {
         $this->capitulos = $capitulos;
 
@@ -137,7 +137,7 @@ class Season
     /**
      * Get capitulos
      *
-     * @return \number
+     * @return integer
      */
     public function getCapitulos()
     {
