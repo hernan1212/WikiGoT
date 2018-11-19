@@ -41,7 +41,7 @@ class Season
     private $capitulos;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="text")
      */
     private $resumen;
     /**
