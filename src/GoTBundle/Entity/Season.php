@@ -41,7 +41,7 @@ class Season
     private $capitulos;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string")
      */
     private $resumen;
     /**
@@ -147,7 +147,7 @@ class Season
     /**
      * Set resumen
      *
-     * @param \DateTime $resumen
+     * @param string $resumen
      *
      * @return Season
      */
@@ -161,7 +161,7 @@ class Season
     /**
      * Get resumen
      *
-     * @return \DateTime
+     * @return string
      */
     public function getResumen()
     {
