@@ -1,0 +1,36 @@
+{# src/GoTBundle/Resources/views/House/show.html.twig #}
+{% extends "::base.html.twig" %}
+{% block title %}Detalles del Casa{% endblock %}
+
+{% block slider %}
+<h3>Detalles de una casa</h3>
+<p>― {{ house.name }}</p> 
+{% endblock %}
+
+{% block body %}
+<div class="services-section" id="service">
+	<div class="container">
+		<div class="col-md-6 service-leftgrid">
+			<h3><img src="{{ asset(house.emblem) }}"  width="108px" height="108px"><span> {{ house.name }}</span></h3>
+			<p> {{ house.description }} </p><br>
+			<h4> Lema: {{ house.motto }} </h4><br>
+			<h5> Animal: {{ house.animal }} </h5>
+		</div>
+		<div class="col-md-6 service-rightgrid">
+			<h2>Personajes dentro de la casa:</h2>
+			{% for personaje in house.personajes %}
+			<div class="service1">
+				<div class="right-grid1">
+					<img src="{{ asset(personaje.foto) }}"  width="108px" height="108px">
+				</div>
+				<div class="right-grid2">
+					<br><a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}"> {{ personaje.name }}</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+{% endblock %}

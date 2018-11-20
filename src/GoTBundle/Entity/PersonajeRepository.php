@@ -26,4 +26,14 @@ class PersonajeRepository extends \Doctrine\ORM\EntityRepository
 
 		return $qh->getQuery()->getResult();
 	}
+
+	public function getOneCharacterForHouse($limit = null)
+	{
+		$qp = $this->createQueryBuilder('p')->groupby('p.house')->select('p')->addOrderBy('p.id', 'ASC');
+
+		if (false === is_null($limit))
+			$qp->setMaxResults($limit);
+
+		return $qp->getQuery()->getResult();
+	}
 }
