@@ -73,8 +73,8 @@
                                                      <li><a href="#contact" class="scroll">contact</a></li>
                 -->
                                 <li><a href="{{ path('blogger_blog_list')}}" class="active" class="scroll">Inicio</a></li>
-                                <li><a href="{{ path('blogger_blog_seasons')}}" class="active" class="scroll">Temporadas</a></li>
-                                <li><a href="#" class="active" class="scroll">Contacto</a></li>
+                                <li><a href="{{ path('blogger_blog_season')}}" class="active" class="scroll">Temporadas</a></li>
+                                <li><a href="{{ path('blogger_blog_house')}}" class="active" class="scroll">Casas</a></li>
                                 {% if not is_granted('ROLE_ADMIN') %}
                                     <li><a href="#" class="active" class="scroll">Entrar</a></li>
                                 {% endif %}

@@ -50,7 +50,6 @@ body{
  }
 
 .right-top a {
-      color: #fff;
        font-size: 2.8em;
   }
 
@@ -208,6 +207,13 @@ ul.callbacks_tabs.callbacks1_tabs {
   color: white;
   margin-bottom: 1em;
 }
+
+.right-top h4 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 1em;
+}
+
 .right-top span {
   color: #fac832;
   font-size: 1.3em;
@@ -232,8 +238,16 @@ p.lable1 {
   font-size: 1.99em;
 
   padding: 1.95em 7em 0.1em 6em;
+}
 
-
+.right-bottom ul li {
+  list-style: none;
+  font-size: 1.4em;
+  text-align:center;
+  padding: 12px 0 ;
+  color: white;
+  border-bottom: 1px solid #fac832;
+  font-weight: 400;
 }
 .services-section {
   background: url("../images/banner1.jpg") no-repeat;
