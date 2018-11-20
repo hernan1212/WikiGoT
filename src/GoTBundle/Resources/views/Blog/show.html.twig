@@ -2,16 +2,42 @@
 {% extends "::base.html.twig" %}
 {% block title %}Detalles del personaje{% endblock %}
 
-{% block body %}
-	<h3>{{ personaje.name }}</h3>
-	<ul>
-		<li>
-			{{ personaje.description }}
-		</li>
-	</ul>
+{% block slider %}
+<h3>Detalles del personaje</h3>
+<p>― {{ personaje.name }}</p> 
 {% endblock %}
 
-{% block stylesheets %}
+{% block body %}
+<div class="about-section" id="aboutus"><!--King Of The North Section-->
+	<div class="about-grids">
+		<div class="col-md-6 left-grid">
+			<div class="right-grid1-icon">
+				<img src="{{ asset(personaje.house.emblem) }}"  width="156px" height="156px"> 
+			</div>
+			<img src="{{ asset(personaje.foto) }}"/><!--Put your Right Image HERE-->
+		</div>
+					
+		<div class="col-md-6 right-grid">
+			<div class="right-top">
+				<h3><span>{{ personaje.name }}</span></h3> <br><br><br><br>
+				<h4>Descripción del personaje:</h4><br><br><br>
+				<p> {{ personaje.description }}</p> <br><br><br><br><br>
+				<h4>Género: <span> {{ personaje.gender }} </span></h4>
+			</div>
+			<div class="right-bottom">
+				<h4>Casa a la que pertenece:<h4>
+				<ul><li><a href="{{ path('blogger_blog_house_show', {'id': personaje.house.id}) }}"> {{ personaje.house.name }} </a></li></ul>
+				<h4>Temporadas en las que aparece<h4>
+				<ul>
+				{% for season in personaje.seasons %}
+				<li> <a href="{{ path('blogger_blog_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
 {% endblock %}
 
 {% block sidebar %}

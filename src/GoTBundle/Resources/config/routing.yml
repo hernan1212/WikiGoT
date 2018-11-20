@@ -6,6 +6,18 @@ blogger_blog_show:
     path: /show/{id}
     defaults: { _controller: GoTBundle:Blog:show }
 
-blogger_blog_seasons:
+blogger_blog_season:
     path: /season/
     defaults: { _controller: GoTBundle:Season:list }
+
+blogger_blog_season_show:
+    path: /season/show/{id}
+    defaults: { _controller: GoTBundle:Season:show }
+
+blogger_blog_house:
+    path: /house/
+    defaults: { _controller: GoTBundle:House:list }
+
+blogger_blog_house_show:
+    path: /house/show/{id}
+    defaults: { _controller: GoTBundle:House:show }
