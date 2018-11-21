@@ -51,271 +51,139 @@
 {% endblock %}
     </head>
     
-    <body>
-    <div class="header" id="head">
-        <div class="header-top">
-                <div class="container">
+<body>
+<div class="header" id="head">
+    <div class="header-top">
+        <div class="container">
             <div class="logo">
                 <a href="index.html{{ path('blogger_blog_list')}}"><img src="{{ asset('images/logo.png') }}"></a><!--Put your logo here-->
-                </div>
-                <div class="top-menu">
-                    <span class="menu"> </span>
-                    <!--Menu-->
-                <ul>
-                <!--
-                    <li><a href="#home" class="active" class="scroll">home</a></li>
-                        <li><a href="#aboutus" class="scroll">King of the North</a></li>
-                            <li><a href="#service" class="scroll">Synopsis</a></li>
-                                 <li><a href="#portfolio" class="scroll">Dead party</a></li>
-                                    <li><a href="#testimonial" class="scroll">Quotes</a></li>
-                                        <li><a href="#team" class="scroll">John Snow</a></li>
-                                            <li><a href="#kill-now" class="scroll">Family</a></li>
-                                                     <li><a href="#contact" class="scroll">contact</a></li>
-                -->
-                                <li><a href="{{ path('blogger_blog_list')}}" class="active" class="scroll">Inicio</a></li>
-                                <li><a href="{{ path('blogger_blog_season')}}" class="active" class="scroll">Temporadas</a></li>
-                                <li><a href="{{ path('blogger_blog_house')}}" class="active" class="scroll">Casas</a></li>
-                                {% if not is_granted('ROLE_ADMIN') %}
-                                    <li><a href="#" class="active" class="scroll">Entrar</a></li>
-                                {% endif %}
-                                {% if is_granted('ROLE_ADMIN') %}
-                                    <li><a href="#" class="active" class="scroll">Salir</a></li>
-                                {% endif %}
-                        </ul>
-                        <!--End Menu-->
-                    </div>
-                     <!--script-nav-->
-         <script>
-         $("span.menu").click(function(){
-         $(".top-menu ul").slideToggle("slow" , function(){
-         });
-         });
-         </script>
-                <div class="clearfix"> </div>
-                    </div>
-                    </div>
-
-<div class="slider"> <!--Slider Section-->
-     <div class="container">
-           <div class="callbacks_container">
-              <ul class="rslides" id="slider">
-                 <li>             
-                    {% block slider %}{% endblock %}    
-                 </li>
-              </ul>
-          </div>
-      </div>
-</div>
-</div> <!--End Slider Section-->
-
-
-            <div class="content"><!--Content Section-->
-                
-            {% block body %}{% endblock %}
-
-
-            
-            
-                
-                    <div class="portfolio-section" id="portfolio"><!--Portfolio Section-->
-                        <div class="continer">
-                            <div class="portfolio-header">
-                                
-                                <h3><img src="images/img3.png"><span>Dead</span> party.</h3>
-                                <p>All died since the beginning of the series.</p>
-                                </div>
-                                 <div class="portfolio"  id="portfolio">
-                    <ul id="filters" class="clearfix">
-                            <li><span class="filter active" data-filter="app card icon web">Season 5</span></li>
-                            <li><span class="filter" data-filter="app">Season 4</span></li>
-                            <li><span class="filter" data-filter="card">Season 3</span></li>
-                            <li><span class="filter" data-filter="app card icon">Season 2</span></li>
-                            <li><span class="filter" data-filter="card icon web">Season 1</span></li>
-                            </ul>
-        <!-- portfolio-section -->
-        </div>
-    <div id="portfoliolist">
-                    <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/1.jpg" class="swipebox"  title="Image Title"> 
-                                <img src="images/1.jpg" class="img-responsive" alt=""> <!-- Put your image here -->
-                                <span class="zoom-icon"></span> </a></div></div>    
-
-                    <div class="portfolio app mix_all " data-cat="app" style="display: inline-block; opacity: 1; ">
-                        <div class="portfolio-wrapper grid_box">        
-                             <a href="images/2.jpg" class="swipebox"  title="Image Title"> <img src="images/2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>                  
-                    <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/3.jpg" class="swipebox"  title="Image Title"> <img src="images/3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>      
-                    <div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/4.jpg" class="swipebox"  title="Image Title"> <img src="images/4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>  
-                
-                    <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/5.jpg" class="swipebox"  title="Image Title"> <img src="images/5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>      
-                    <div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/6.jpg" class="swipebox"  title="Image Title"> <img src="images/6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>  
-                    
-                    <div class="portfolio card mix_all" data-cat=" web" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/7.jpg" class="swipebox"  title="Image Title"> <img src="images/7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>      
-                    <div class="portfolio card mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-                        <div class="portfolio-wrapper grid_box">        
-                            <a href="images/8.jpg" class="swipebox"  title="Image Title"> <img src="images/8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a><!-- Put your image here -->
-                        </div>
-                    </div>                                          
-                    <div class="clearfix"> </div>                               
-                </div>
-                    <div class="clearfix"> </div>
-    </div><!--End Portfolio Section-->
-                            
-      <!-- Script for gallery Here -->
-                <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-                    <script type="text/javascript">
-                    $(function () {
-                        
-                        var filterList = {
-                        
-                            init: function () {
-                            
-                                // MixItUp plugin
-                                // http://mixitup.io
-                                $('#portfoliolist').mixitup({
-                                    targetSelector: '.portfolio',
-                                    filterSelector: '.filter',
-                                    effects: ['fade'],
-                                    easing: 'snap',
-                                    // call the hover effect
-                                    onMixEnd: filterList.hoverEffect()
-                                });             
-                            
-                            },
-                            
-                            hoverEffect: function () {
-                            
-                                // Simple parallax effect
-                                $('#portfoliolist .portfolio').hover(
-                                    function () {
-                                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-                                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
-                                    },
-                                    function () {
-                                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-                                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
-                                    }       
-                                );              
-                            
-                            }
-                
-                        };
-                        
-                        // Run the show!
-                        filterList.init();
-                        
-                        
-                    }); 
-                    </script>
-<!-- End portfolio-section  -->
-</div>
-
-    <div class="team-section" id="team"><!-- John Snow -->
-                <div class="container">
-                            <div class="team-header">
-                                
-                                <h3><img src="images/icon1.png"> About <span>Me</span></h3>
-
-                                <p>Hello, i'm John Snow, webdesigner.</p>
-                                </div>
-                                <div class="team-grids">
-                                    <div class="col-md-4 team-grid">
-                                        <img src="images/t1.jpg">
-                            </div>
-                                    <div class="team-grids">
-                                    <div class="col-md-8 team-grid">
-                                        <div class="team-content">
-                                            <h4>John Snow</h4><br><br><br><br>
-                                            <h3>Webdesigner</h3><h2>In North</h2>
-                                            <br>
-                                        <p> i'm the bastard son of Eddard Stark, by a mother whose identity is a source of speculation. Raised by his father alongside his true-born half-siblings, but joins the Night's Watch when i nears adulthood. i'm constantly accompanied by my albino direwolf Ghost. At the beginning of A Game of Thrones, i fourteen years old. i'm one of the major POV characters in the books.</p>
-                                        </div>
-                        </div>
-                            </div>
-                        <div class="clearfix"> </div>
-                            </div> 
-                            </div>
-                        </div><!-- End John Snow -->
-
-
-
-
-
-                        <!--Contact Section-->
-                    <div class="contact-section" id="contact">
-                        <div class="contact-grids">
-                            <div class="col-md-6 contact-leftgrid">
-                            <!--Title Contact Section-->
-                                <h3><img src="images/icon7.png"> Send me a <span>Sword</span></h3>
-                                <p>Kill me with a sword, please.</p>
-                                <!--End Title Contact Section-->
-                            <form>
-                                <input type="text" class="text" value="Name " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name ';}">
-                                 <input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email ';}">
-                                    <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
-                                        <input type="submit" value="SEND">
-                                </form>
-                            </div>
-                            <!--Google Maps Section-->
-                            <div class="col-md-6 contact-rightgrid">
-                                <div class="google-map">
-                                    <img src="images/map.jpg"> </img>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        
-                        </div>
-                        </div>
-                    </div> <!--End Contact Section-->
-                    
-            <div class="footer-section">
-                                <div class="container">
-                                    
-                                    <div class="footer-top">
-                                    <p> Designed by <a href="http://w3layouts.com" target="target_blank">Didier Laureaux</a></p>
-                                </div>
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            /*
-                            var defaults = {
-                                containerID: 'toTop', // fading element id
-                                containerHoverID: 'toTopHover', // fading element hover id
-                                scrollSpeed: 1200,
-                                easingType: 'linear' 
-                            };
-                            */
-                            
-                            $().UItoTop({ easingType: 'easeOutQuart' });
-                            
-                        });
-                    </script>
-                <a class="scroll" href="#head" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-
-                </div>
             </div>
-    </body>
+            <div class="top-menu">
+                <span class="menu"> </span> 
+                <ul>
+                    <!--
+                        <li><a href="#home" class="active" class="scroll">home</a></li>
+                            <li><a href="#aboutus" class="scroll">King of the North</a></li>
+                                <li><a href="#service" class="scroll">Synopsis</a></li>
+                                     <li><a href="#portfolio" class="scroll">Dead party</a></li>
+                                        <li><a href="#testimonial" class="scroll">Quotes</a></li>
+                                            <li><a href="#team" class="scroll">John Snow</a></li>
+                                                <li><a href="#kill-now" class="scroll">Family</a></li>
+                                                         <li><a href="#contact" class="scroll">contact</a></li>
+                    -->
+                    <li><a href="{{ path('blogger_blog_list')}}" class="scroll">Inicio</a></li>
+                    <li><a href="{{ path('blogger_season_list')}}" class="scroll">Temporadas</a></li>
+                    <li><a href="{{ path('blogger_house_list')}}" class="scroll">Casas</a></li>
+                    <li><a href="{{ path('blogger_blog_contact')}}" class="scroll">Contactar</a></li>
+                    {% if not is_granted('ROLE_ADMIN') %}
+                        <li><a href="#"  class="scroll">Entrar</a></li>
+                    {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li><a href="#"  class="scroll">Salir</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <script>
+                $("span.menu").click(function(){
+                $(".top-menu ul").slideToggle("slow" , function(){
+                });
+                });
+            </script>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="container">
+            <div class="callbacks_container">
+                <ul class="rslides" id="slider">
+                    <li>             
+                        {% block slider %}{% endblock %}    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="content">
+                
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript" src="{{ asset('js/jquery.mixitup.min.js') }}"></script>
+    <script type="text/javascript">
+        $(function () {
+            
+            var filterList = {
+            
+                init: function () {
+                
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#portfoliolist').mixitup({
+                        targetSelector: '.portfolio',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        // call the hover effect
+                        onMixEnd: filterList.hoverEffect()
+                    });             
+                
+                },
+                
+                hoverEffect: function () {
+                
+                    // Simple parallax effect
+                    $('#portfoliolist .portfolio').hover(
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
+                        },
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
+                        }       
+                    );              
+                
+                }
+    
+            };
+            
+            // Run the show!
+            filterList.init();
+            
+            
+        }); 
+    </script>      
+</div> 
+                    
+<div class="footer-section">
+    <div class="container">
+        <div class="footer-top">
+            <p> Diseñado por<a href="http://w3layouts.com" target="target_blank">Los Caminantes Informáticos</a></p>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+            
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            
+            });
+        </script>
+        <a class="scroll" href="#head" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+    </div>
+</div>
+</body>
 </html>

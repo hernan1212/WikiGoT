@@ -41,5 +41,10 @@ class BlogController extends Controller
 
         return $house;
     }
+
+    public function contactAction()
+	{
+		return $this->render('GoTBundle:Blog:contact.html.twig');
+	}
 }
 ?>

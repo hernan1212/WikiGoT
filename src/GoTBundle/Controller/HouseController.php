@@ -5,8 +5,6 @@ namespace GoTBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use BlogBundle\Entity\Comment;
-use BlogBundle\Form\CommentType;
 
 /**
  * House controller.
@@ -31,7 +29,7 @@ class HouseController extends Controller
         }
         $personajes = $this->get('doctrine')->getManager()->getRepository('GoTBundle:Personaje')->getPersonajesForHouse($house->getId());
 
-        return $this->render('GoTBundle:House:show.html.twig', array('house' => $house));
+        return $this->render('GoTBundle:House:show.html.twig', array('house' => $house, 'personajes' => $personajes));
     }
 }
 ?>

@@ -57,7 +57,7 @@ body{
 .header{
 	background: url("../images/banner.jpg") no-repeat;
 	background-size: cover;
-	min-height:865px;
+	min-height:530px;
 }
 .header-top {
   padding: 6em 0;
@@ -407,6 +407,22 @@ div#portfoliolist {
 	z-index:500;
 	padding:5px 8px;
 }
+.about-grids h1
+{
+  color: orange;
+  text-align: center;
+  position: center;
+  padding: 5em 0 0 0;
+  font-size: 7em;
+}
+.about-grids h2
+{
+  color: white;
+  text-align: center;
+  position: center;
+  padding: 1em 0 0 0;
+  font-size: 4em;
+}
 .portfolio .text-category {
 	display:block;
 	font-size:9px;
@@ -630,7 +646,16 @@ div#portfoliolist {
  .team-content a{
   font-size: 5em;
 
-
+ }
+ .team-content h1
+ {
+      font-size: 0.4em;
+      background: #fff;
+      width: 35%;
+      margin: 2.5em auto 0;
+      padding: 1.1em 0;
+      border: 1px solid #fac832;
+      font-weight: 700;
  }
   .team-content h3{
   font-size: 2.5em;
@@ -1118,6 +1143,17 @@ div#portfoliolist {
 	text-indent: 100%;
 	background: url("../images/to-top2.png") no-repeat 0px 0px;
 }
+    .slide-text p
+    {
+      text-align: center;
+      font-size: 2.2em;
+      background: #fff;
+      width: 25%;
+      margin: 1.5em auto 0;
+      padding: 1.1em 0;
+      border: 1px solid #fac832;
+      font-weight: 700;
+    }
 	
 				/*-- responsive-mediaquries --*/
 
@@ -1282,8 +1318,10 @@ div#portfoliolist {
   		font-size: 1.1em;
   	}
   	.slide-text h4 {
-  		font-size: 2em;
+  		font-size: 2.5em;
   	}
+
+
   	.wmuSliderPrev, .wmuSliderNext {
   		top: 60%;
   	}
@@ -1332,7 +1370,7 @@ div#portfoliolist {
  		font-size: 3em;
  	}
  	.pric-top h4 {
-	  font-size: 2.5em;
+	  font-size: 2.1em;
 	  padding-left: 0.6em;
 	}
 	.pric-list ul li {
@@ -1429,6 +1467,7 @@ div#portfoliolist {
 			display:block;
 			
 		}
+
 		.top-menu ul li{
 			display:block;
 			float:none;

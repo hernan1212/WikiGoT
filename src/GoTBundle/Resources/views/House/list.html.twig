@@ -28,10 +28,10 @@
 							<li> <a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}"> {{ personaje.name }} </a> </li>
 						{% endfor %}
 				    </ul>
-					<p><a href="{{ path('blogger_blog_house_show', {'id': house.id}) }}">Más info</a></p>
+					<p><a href="{{ path('blogger_house_show', {'id': house.id}) }}">Más info</a></p>
 				</div>
 			</div>
-			{% endfor %}<br><br>
+			{% endfor %}
 			<div class="clearfix"> </div>
 		</div>
 		

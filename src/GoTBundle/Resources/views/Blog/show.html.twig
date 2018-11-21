@@ -26,11 +26,11 @@
 			</div>
 			<div class="right-bottom">
 				<h4>Casa a la que pertenece:<h4>
-				<ul><li><a href="{{ path('blogger_blog_house_show', {'id': house.id}) }}"> {{ house.name }} </a></li></ul>
+				<ul><li><a href="{{ path('blogger_house_show', {'id': house.id}) }}"> {{ house.name }} </a></li></ul>
 				<h4>Temporadas en las que aparece:<h4>
 				<ul>
 				{% for season in seasons %}
-				<li> <a href="{{ path('blogger_blog_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
+				<li> <a href="{{ path('blogger_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
 				{% endfor %}
 				</ul>
 			</div>
