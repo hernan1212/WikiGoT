@@ -24,6 +24,21 @@ h1,h2,h3,h4,h5,h6{
 	padding:0 0;
 	margin:0 0;
 }
+h4
+{
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+h5
+{
+  color: orange;
+  font-size: 2.1em;
+  font-weight: 700;
+    margin-bottom: 0.2em;
+}
 p{
 	padding:0 0;
 	margin:0 0;
@@ -42,7 +57,7 @@ body{
 .header{
 	background: url("../images/banner.jpg") no-repeat;
 	background-size: cover;
-	min-height:865px;
+	min-height:530px;
 }
 .header-top {
   padding: 6em 0;
@@ -253,7 +268,12 @@ p.lable1 {
   background: url("../images/banner1.jpg") no-repeat;
   background-size: cover;
   min-height: 500px;
-  padding: 9em 0;
+  padding: 3em 0;
+}
+.services-section h2{
+  font-size: 3.0em;
+  color: #000;
+  margin-bottom: 1em;
 }
 .service-leftgrid h3 {
   font-size: 2.5em;
@@ -307,6 +327,12 @@ p.lable1 {
   color: #fff;
   font-size: 1.2em;
   font-weight: 300;
+}
+
+.right-grid2 a {
+   font-size: 2.7em;
+  font-weight: 300;
+  margin-top: 2.5em;
 }
 .service2 {
   padding: 4em 0;
@@ -380,6 +406,22 @@ div#portfoliolist {
 	position: relative;
 	z-index:500;
 	padding:5px 8px;
+}
+.about-grids h1
+{
+  color: orange;
+  text-align: center;
+  position: center;
+  padding: 5em 0 0 0;
+  font-size: 7em;
+}
+.about-grids h2
+{
+  color: white;
+  text-align: center;
+  position: center;
+  padding: 1em 0 0 0;
+  font-size: 4em;
 }
 .portfolio .text-category {
 	display:block;
@@ -604,7 +646,16 @@ div#portfoliolist {
  .team-content a{
   font-size: 5em;
 
-
+ }
+ .team-content h1
+ {
+      font-size: 0.4em;
+      background: #fff;
+      width: 35%;
+      margin: 2.5em auto 0;
+      padding: 1.1em 0;
+      border: 1px solid #fac832;
+      font-weight: 700;
  }
   .team-content h3{
   font-size: 2.5em;
@@ -696,7 +747,7 @@ div#portfoliolist {
 	background:#dbdad8;
 }
 .pric-top h4{
-	font-size: 3em;
+	font-size: 2.5em;
   color: #fac832;
   font-weight: 700;  
    text-transform: capitalize;
@@ -1092,6 +1143,17 @@ div#portfoliolist {
 	text-indent: 100%;
 	background: url("../images/to-top2.png") no-repeat 0px 0px;
 }
+    .slide-text p
+    {
+      text-align: center;
+      font-size: 2.2em;
+      background: #fff;
+      width: 25%;
+      margin: 1.5em auto 0;
+      padding: 1.1em 0;
+      border: 1px solid #fac832;
+      font-weight: 700;
+    }
 	
 				/*-- responsive-mediaquries --*/
 
@@ -1256,8 +1318,10 @@ div#portfoliolist {
   		font-size: 1.1em;
   	}
   	.slide-text h4 {
-  		font-size: 2em;
+  		font-size: 2.5em;
   	}
+
+
   	.wmuSliderPrev, .wmuSliderNext {
   		top: 60%;
   	}
@@ -1306,7 +1370,7 @@ div#portfoliolist {
  		font-size: 3em;
  	}
  	.pric-top h4 {
-	  font-size: 2.5em;
+	  font-size: 2.1em;
 	  padding-left: 0.6em;
 	}
 	.pric-list ul li {
@@ -1403,6 +1467,7 @@ div#portfoliolist {
 			display:block;
 			
 		}
+
 		.top-menu ul li{
 			display:block;
 			float:none;

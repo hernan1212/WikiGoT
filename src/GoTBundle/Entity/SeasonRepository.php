@@ -10,4 +10,14 @@ namespace GoTBundle\Entity;
  */
 class SeasonRepository extends \Doctrine\ORM\EntityRepository
 {
+		public function getAllSeasons($limit = null)
+	{
+		$qs = $this->createQueryBuilder('s')->select('s')->addOrderBy('s.id', 'ASC');
+
+		if (false === is_null($limit))
+			$qs->setMaxResults($limit);
+
+		return $qs->getQuery()->getResult();
+	}
 }
+

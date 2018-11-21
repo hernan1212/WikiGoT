@@ -12,7 +12,7 @@ class HouseRepository extends \Doctrine\ORM\EntityRepository
 {
 	public function getAllHouses($limit = null)
 	{
-		$qh = $this->createQueryBuilder('h')->select('h')->addOrderBy('h.name', 'ASC');
+		$qh = $this->createQueryBuilder('h')->select('h')->addOrderBy('h.id', 'ASC');
 
 		if (false === is_null($limit))
 			$qh->setMaxResults($limit);

@@ -1,0 +1,41 @@
+{# src/GoTBundle/Resources/views/House/list.html.twig #}
+{% extends "::base.html.twig" %}
+{% block title %}Lista de Casas{% endblock %}
+
+{% block slider %}
+<h3> Lista de Casas de Juego de Tronos</h3>
+<p>― Las mas importantes del universo</p> 
+{% endblock %}
+
+{% block body %}
+<div class="kill-now-section" id="kill-now">
+	<div class="container">
+		<div class="kill-now-header">
+			<h3><img src="{{ asset("images/img3.png") }}"> <span>Familia</span> de GoT</h3>
+			<p>La gran familia de <span>Juego de Tronos</span></p>
+		</div>
+		<div class="kill-now-grids">
+			{% for house in houses%}
+			<div class="col-md-4 pric-grid effect">
+				<div class="pric-top">
+					<span> {{ house.id }} </span>											
+					<h4> {{ house.name }}</h4>
+				</div>
+
+				<div class="pric-list">
+					<ul>
+						{% for personaje in house.personajes %}
+							<li> <a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}"> {{ personaje.name }} </a> </li>
+						{% endfor %}
+				    </ul>
+					<p><a href="{{ path('blogger_house_show', {'id': house.id}) }}">Más info</a></p>
+				</div>
+			</div>
+			{% endfor %}
+			<div class="clearfix"> </div>
+		</div>
+		
+	</div>
+</div>
+
+{% endblock %}

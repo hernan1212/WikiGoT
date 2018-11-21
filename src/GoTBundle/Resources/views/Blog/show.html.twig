@@ -12,25 +12,25 @@
 	<div class="about-grids">
 		<div class="col-md-6 left-grid">
 			<div class="right-grid1-icon">
-				<img src="{{ asset(personaje.house.emblem) }}"  width="156px" height="156px"> 
+				<img src="{{ asset(house.emblem) }}"  width="156px" height="156px"> 
 			</div>
-			<img src="{{ asset(personaje.foto) }}"/><!--Put your Right Image HERE-->
+			<img src="{{ asset(personaje.foto) }}" width="400px" height="800px">
 		</div>
 					
 		<div class="col-md-6 right-grid">
 			<div class="right-top">
-				<h3><span>{{ personaje.name }}</span></h3> <br><br><br><br>
+				<h3><span>{{ personaje.name }}</span></h3> 
 				<h4>Descripción del personaje:</h4><br><br><br>
-				<p> {{ personaje.description }}</p> <br><br><br><br><br>
+				<p> {{ personaje.description }}</p> <br><br>
 				<h4>Género: <span> {{ personaje.gender }} </span></h4>
 			</div>
 			<div class="right-bottom">
 				<h4>Casa a la que pertenece:<h4>
-				<ul><li><a href="{{ path('blogger_blog_house_show', {'id': personaje.house.id}) }}"> {{ personaje.house.name }} </a></li></ul>
-				<h4>Temporadas en las que aparece<h4>
+				<ul><li><a href="{{ path('blogger_house_show', {'id': house.id}) }}"> {{ house.name }} </a></li></ul>
+				<h4>Temporadas en las que aparece:<h4>
 				<ul>
-				{% for season in personaje.seasons %}
-				<li> <a href="{{ path('blogger_blog_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
+				{% for season in seasons %}
+				<li> <a href="{{ path('blogger_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
 				{% endfor %}
 				</ul>
 			</div>

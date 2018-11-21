@@ -6,34 +6,36 @@
 <h3> Lista de Personajes de Juego de Tronos</h3>
 <p>― Divididos por casas</p> 
 {% endblock %}
-{% block body %}
-{% for house in houses %}
 
-<div class="team-section" id="team"><!-- John Snow -->
+{% block body %}
+{% for personaje in personajes %}
+
+<div class="team-section" id="team">
     <div class="container">
         <div class="team-header">
                                 
-                                <h3><img src="{{ asset(house.emblem) }}" width="108px" height="108px"> {{ house.name }}</h3>
+                                <h3><img src="{{ asset(personaje.house.emblem) }}" width="108px" height="108px"> {{ personaje.house.name }}</h3>
 
-                                <p>{{ house.motto }}</p>
+                                <p>{{ personaje.house.motto }}</p>
                                 </div>
                                 <div class="team-grids">
                                     <div class="col-md-4 team-grid">
-                                        <img src="{{ asset(house.personajes[0].foto) }}"  width="300px" height="450px">
+                                        <img src="{{ asset(personaje.foto) }}"  width="300px" height="450px">
                             </div>
                                     <div class="team-grids">
                                     <div class="col-md-8 team-grid">
                                         <div class="team-content">
-                                            <a href="{{ path('blogger_blog_show', {'id': house.personajes[0].id}) }}">
-                                            {{ house.personajes[0].name }}</a><br><br><br><br>
+                                            <a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}">
+                                            {{ personaje.name }}</a><br><br><br><br>
                                             <br><br><br><br>
-                                        <p> {{ house.personajes[0].description(150) }} </p>
+                                        <p> {{ personaje.description(150) }} </p>
+                                        <h1><a href="{{ path('blogger_blog_show', { 'id': personaje.id }) }}">Mas info</a></h1>
                                         </div>
                         </div>
                             </div>
                         <div class="clearfix"> </div>
                             </div> 
                             </div>
-                        </div><!-- End John Snow -->
+                        </div>
 {% endfor %}
 {% endblock %}

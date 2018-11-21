@@ -1,0 +1,30 @@
+{# src/GoTBundle/Resources/views/Blog/contact.html.twig #}
+{% extends "::base.html.twig" %}
+{% block title %}Contacto{% endblock %}
+
+{% block slider %}
+<h3> Contacta con Juego de Tronos</h3>
+<p>― No creo que llegue a ningún sitio...</p> 
+{% endblock %}
+
+{% block body %}
+<div class="contact-section" id="contact">
+	<div class="contact-grids">
+		<div class="col-md-6 contact-leftgrid">
+			<h3><img src="{{ asset("images/icon7.png") }}"> Envía una <span>Pregunta</span></h3>
+			<form>
+				<input type="text" class="text" value="Name " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name ';}">
+				<input type="text" class="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email ';}">
+				<textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
+ 				<input type="submit" value="SEND">
+			</form>
+		</div>
+		<div class="col-md-6 contact-rightgrid">
+			<div class="google-map">
+				<img src="{{ asset("images/map.jpg") }}"> </img>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+{% endblock %}
