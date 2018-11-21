@@ -1,7 +1,7 @@
 # src/AdminBundle/resources/config/routing.yml
 admin_homepage:
-    path:     /index
-    defaults: { _controller: AdminBundle:Default:index }
+    path:     /
+    defaults: { _controller: GoTBundle:Blog:list }
 
 blogger_admin_login:
     path: /login

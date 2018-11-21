@@ -23,25 +23,11 @@ class BlogController extends Controller
 			// cause the 404 page not found to be displayed
 			throw $this->createNotFoundException('No se ha encontrado la casa.');
 		}
-		$house = $this->getHouse($personaje->getId());
+		$house = $personaje->getHouse();
 		$seasons = $personaje->getSeasons();
 
 		return $this->render('GoTBundle:Blog:show.html.twig', array('personaje' => $personaje, 'house' => $house, 'seasons' => $seasons));
 	}
-
-	protected function getHouse($house_id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $house = $em->getRepository('GoTBundle:House')->find($house_id);
-
-        if (!$house) {
-            throw $this->createNotFoundException('Unable to find House.');
-        }
-
-        return $house;
-    }
-
     public function contactAction()
 	{
 		return $this->render('GoTBundle:Blog:contact.html.twig');
