@@ -22,7 +22,7 @@
 				<h4>Capítulos: <span> {{ season.capitulos }} </span></h4>
 			</div>
 			<div class="right-bottom">
-				<h4>Personajes que aparecen:<h4>
+				<h4>Personajes que aparecen:</h4>
 				<ul>
 				{% for personaje in personajes %}
 				<li> <a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}"> {{ personaje.name }} </a> </li>
@@ -33,7 +33,4 @@
 		<div class="clearfix"> </div>
 	</div>
 </div>
-{% endblock %}
-
-{% block sidebar %}
 {% endblock %}

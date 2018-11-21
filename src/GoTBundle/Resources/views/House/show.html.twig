@@ -1,6 +1,6 @@
 {# src/GoTBundle/Resources/views/House/show.html.twig #}
 {% extends "::base.html.twig" %}
-{% block title %}Detalles del Casa{% endblock %}
+{% block title %}Detalles de la Casa{% endblock %}
 
 {% block slider %}
 <h3>Detalles de una casa</h3>
@@ -11,7 +11,7 @@
 <div class="services-section" id="service">
 	<div class="container">
 		<div class="col-md-6 service-leftgrid">
-			<h3><img src="{{ asset(house.emblem) }}"  width="108px" height="108px"><span> {{ house.name }}</span></h3>
+			<h3><img src="{{ asset(house.emblem) }}"  width="108" height="108" alt="Error"><span> {{ house.name }}</span></h3>
 			<p> {{ house.description }} </p><br>
 			<h4> Lema: {{ house.motto }} </h4><br>
 			<h5> Animal: {{ house.animal }} </h5>
@@ -21,7 +21,7 @@
 			{% for personaje in personajes %}
 			<div class="service1">
 				<div class="right-grid1">
-					<img src="{{ asset(personaje.foto) }}"  width="108px" height="108px">
+					<img src="{{ asset(personaje.foto) }}"  width="108" height="108" alt="Error">
 				</div>
 				<div class="right-grid2">
 					<br><a href="{{ path('blogger_blog_show', {'id': personaje.id}) }}"> {{ personaje.name }}</a>

@@ -1,0 +1,14 @@
+# src/AdminBundle/resources/config/routing.yml
+admin_homepage:
+    path:     /index
+    defaults: { _controller: AdminBundle:Default:index }
+
+blogger_admin_login:
+    path: /login
+    defaults: { _controller: AdminBundle:Security:login }
+
+blogger_admin_login_check:
+    path: /login_check
+
+blogger_admin_logout:
+    path: /logout

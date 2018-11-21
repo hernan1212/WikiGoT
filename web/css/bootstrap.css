@@ -1725,7 +1725,6 @@ output {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: none;
   opacity: 1;
 }
 textarea.form-control {
@@ -3379,7 +3378,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #555;
   text-align: center;
-  background-color: none;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -3464,7 +3462,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: none;
 }
 .nav > li.disabled > a {
   color: #999;
@@ -3479,7 +3476,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: none;
   border-color: #1B242F;
 }
 .nav .nav-divider {
@@ -3505,7 +3501,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: none none #ddd;
+  border-color: #ddd;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -4164,7 +4160,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   color: #fac832;
-  background-color: none;
   border-color: #ddd;
 }
 .pagination > .active > a,
@@ -4240,7 +4235,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: none;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4368,7 +4362,6 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: none;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5552,7 +5545,6 @@ button.close {
   width: 12px;
   height: 12px;
   margin: 0;
-  background-color: url(../images/pagenate.png) no-repeat 0px 0px;
 }
 .carousel-caption {
   position: absolute;

@@ -1,3 +1,7 @@
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 go_t:
     resource: "@GoTBundle/Resources/config/routing.yml"
     prefix:   /

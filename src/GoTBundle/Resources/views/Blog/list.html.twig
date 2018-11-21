@@ -10,17 +10,17 @@
 {% block body %}
 {% for personaje in personajes %}
 
-<div class="team-section" id="team">
+<div class="team-section">
     <div class="container">
         <div class="team-header">
                                 
-                                <h3><img src="{{ asset(personaje.house.emblem) }}" width="108px" height="108px"> {{ personaje.house.name }}</h3>
+                                <h3><img src="{{ asset(personaje.house.emblem) }}" width="108" height="108" alt="Error"> {{ personaje.house.name }}</h3>
 
                                 <p>{{ personaje.house.motto }}</p>
                                 </div>
                                 <div class="team-grids">
                                     <div class="col-md-4 team-grid">
-                                        <img src="{{ asset(personaje.foto) }}"  width="300px" height="450px">
+                                        <img src="{{ asset(personaje.foto) }}"  width="300" height="450" alt="Error">>
                             </div>
                                     <div class="team-grids">
                                     <div class="col-md-8 team-grid">

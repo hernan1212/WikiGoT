@@ -3,18 +3,18 @@
 {% block title %}Detalles del personaje{% endblock %}
 
 {% block slider %}
-<h3>Detalles del personaje</h3>
-<p>― {{ personaje.name }}</p> 
+	<h3>Detalles del personaje</h3>
+	<p>― {{ personaje.name }}</p> 
 {% endblock %}
 
 {% block body %}
-<div class="about-section" id="aboutus"><!--King Of The North Section-->
+<div class="about-section" id="aboutus">
 	<div class="about-grids">
 		<div class="col-md-6 left-grid">
 			<div class="right-grid1-icon">
-				<img src="{{ asset(house.emblem) }}"  width="156px" height="156px"> 
+				<img src="{{ asset(house.emblem) }}"  width="156" height="156" alt="Error"> 
 			</div>
-			<img src="{{ asset(personaje.foto) }}" width="400px" height="800px">
+			<img src="{{ asset(personaje.foto) }}" width="400" height="800" alt="Error">
 		</div>
 					
 		<div class="col-md-6 right-grid">
@@ -25,12 +25,12 @@
 				<h4>Género: <span> {{ personaje.gender }} </span></h4>
 			</div>
 			<div class="right-bottom">
-				<h4>Casa a la que pertenece:<h4>
+				<h4>Casa a la que pertenece:</h4>
 				<ul><li><a href="{{ path('blogger_house_show', {'id': house.id}) }}"> {{ house.name }} </a></li></ul>
-				<h4>Temporadas en las que aparece:<h4>
+				<h4>Temporadas en las que aparece:</h4>
 				<ul>
 				{% for season in seasons %}
-				<li> <a href="{{ path('blogger_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
+					<li> <a href="{{ path('blogger_season_show', {'id': season.id}) }}"> {{ season.name }} </a> </li>
 				{% endfor %}
 				</ul>
 			</div>
@@ -38,7 +38,4 @@
 		<div class="clearfix"> </div>
 	</div>
 </div>
-{% endblock %}
-
-{% block sidebar %}
 {% endblock %}
